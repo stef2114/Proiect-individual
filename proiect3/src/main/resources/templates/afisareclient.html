@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Getting Started: Serving Web Content</title>
+	<meta http-equiv="Content-Type" content="text/html;
+charset=UTF-8" />
+</head>
+<body>
+
+	<h4>Name:</h4>
+	<p th:text="${client.firstname} +' '+${client.lastname}+'.'" />
+	<br>
+	<h4>City:</h4>
+	<p th:text="${client.city} + '.'" />
+	<br>
+	<a href="/mesaj?name=" +${client.email}>Favorite List</a>
+</body>
+</html>
