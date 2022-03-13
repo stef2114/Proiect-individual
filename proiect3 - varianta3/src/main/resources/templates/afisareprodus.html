@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Getting Started: Serving Web Content</title>
+	<meta http-equiv="Content-Type" content="text/html;
+charset=UTF-8" />
+</head>
+<body>
+
+	<h4>Name:</h4>
+	<p th:text="${produs.name} +'.'" />
+	<br>
+	<h4>Overview:</h4>
+	<p th:text="${produs.overview} + '.'" />
+	<br>
+	<h4>Administration:</h4>
+	<p th:text="${produs.use} + '.'" />
+	<br>
+	<h4>Nutritional information:</h4>
+	<p th:text="${produs.nutrinfo} + '.'" />
+	<br>
+	<a href="/addfavls?name=">Add to Favorite List</a>
+	<a href="/home">Home</a>
+
+</body>
+</html>
