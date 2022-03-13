@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Getting Started: Serving Web Content</title>
+	<meta http-equiv="Content-Type" content="text/html;
+charset=UTF-8" />
+</head>
+<body>
+
+	<a href="/searchproduct">Search Product</a>
+	<table class="table">
+  		<thead class="thead-dark">
+    		<tr>
+      			<th scope="col">id</th>
+      			<th scope="col">,name</th>
+      			<th scope="col">,overview</th>
+      			<th scope="col">,use</th>
+      			<th scope="col">,nutrinfo</th>
+      			<th scope="col">,price</th>
+      			<th scope="col">,delete product</th>
+    		</tr>
+  		</thead>
+  		<tbody>
+    		<tr th:each="product : ${products}">
+      			<th scope="row">[[*{product.id}]]</th>
+      			<td><a th:href="@{/productaccount/{id}(id=${product.id})}"
+      			class="btn btn-danger">[[*{product.name}]]</a></td>
+      			<td>[[*{product.overview}]]</td>
+      			<td>[[*{product.use}]]</td>
+      			<td>[[*{product.nutrinfo}]]</td>
+      			<td>[[*{product.price}]]</td>
+      			<td><a th:href="@{/deleteprod/{id}(id=${product.id})}"
+      			class="btn btn-danger">delete</a></td>
+    		</tr>
+    	</tbody>
+    </table>
+	<br>
+	<a href="/home">HomePage</a>
+</body>
+</html>
